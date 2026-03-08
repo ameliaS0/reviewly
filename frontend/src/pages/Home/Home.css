@@ -1,0 +1,206 @@
+.home-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* ── Hero ── */
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 80px;
+  gap: 24px;
+}
+
+.home-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.home-hero-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.home-logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.home-title {
+  font-size: clamp(36px, 7vw, 64px);
+  line-height: 1.1;
+  color: var(--text);
+  max-width: 600px;
+}
+
+.home-title-accent {
+  color: var(--accent);
+}
+
+.home-subtitle {
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.home-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-cta {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ── Stats ── */
+.home-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-stat {
+  text-align: center;
+}
+
+.home-stat-value {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--text);
+  letter-spacing: -0.03em;
+}
+
+.home-stat-label {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 4px;
+}
+
+/* ── Features ── */
+.home-features {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+}
+
+.home-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.home-section-title {
+  font-size: clamp(24px, 4vw, 36px);
+  text-align: center;
+  margin-bottom: 48px;
+  color: var(--text);
+}
+
+.home-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 16px;
+}
+
+.home-feature-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.home-feature-card:hover {
+  transform: translateY(-2px);
+}
+
+.home-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home-feature-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.home-feature-desc {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+/* ── CTA final ── */
+.home-cta-section {
+  text-align: center;
+  padding: 80px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-cta-title {
+  font-size: clamp(24px, 4vw, 36px);
+  color: var(--text);
+}
+
+.home-cta-subtitle {
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .home-hero {
+    padding: 48px 0 48px;
+  }
+
+  .home-stats {
+    gap: 24px;
+  }
+
+  .home-features {
+    padding: 48px 0;
+  }
+}

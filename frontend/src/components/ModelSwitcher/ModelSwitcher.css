@@ -1,0 +1,111 @@
+.model-switcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 500;
+}
+
+.model-switcher-panel {
+  position: absolute;
+  bottom: 52px;
+  right: 0;
+  width: 280px;
+  padding: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.model-switcher-panel-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.model-switcher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.model-switcher-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  transition: all 0.15s;
+  text-align: left;
+  width: 100%;
+}
+
+.model-switcher-item.active {
+  border-color: var(--accent-border);
+  background: var(--accent-dim);
+}
+
+.model-switcher-item-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.model-switcher-item.active .model-switcher-item-name {
+  color: var(--accent);
+}
+
+.model-switcher-item-lang {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+
+.model-switcher-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 6px var(--accent);
+}
+
+.model-switcher-loading {
+  font-size: 11px;
+  color: var(--accent);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.model-switcher-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  transition: all 0.15s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.model-switcher-toggle:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.model-switcher-toggle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
