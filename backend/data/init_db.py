@@ -18,7 +18,7 @@ if not DATABASE_URL:
 base_url, db_name = DATABASE_URL.rsplit('/', 1)
 engine_root = create_engine(f'{base_url}/postgres', isolation_level='AUTOCOMMIT')
 with engine_root.connect() as conn:
-    exists = conn.execute(text(f'SELECT 1 FROM pg_database WHERE datname = "{db_name}"')).fetchone()
+    exists = conn.execute(text("SELECT 1 FROM pg_database WHERE datname = :name"), {"name": db_name}).fetchone()
     if not exists:
         conn.execute(text(f'CREATE DATABASE {db_name}'))
         print(f'Base "{db_name}" créée')

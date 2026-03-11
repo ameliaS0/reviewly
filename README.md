@@ -116,14 +116,14 @@ cd reviewly
 ```bash
 cd backend
 python -m venv env
-source env/bin/activate      # Windows: venv\Scripts\activate
+source env/bin/activate      # Windows: env\Scripts\activate
 pip install -r requirements.txt
 pip install sentencepiece     # Requis pour CamemBERT
 ```
 
 Copier et remplir le fichier `.env` :
 ```bash
-cp .env.example backend/.env
+cp .env.example .env
 ```
 
 ```env
