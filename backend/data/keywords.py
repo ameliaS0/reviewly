@@ -1,3 +1,5 @@
+#générer par IA
+
 STOP_WORDS = {
     # Français
     'le','la','les','de','du','des','un','une','et','en','est','que','qui',
