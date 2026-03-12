@@ -10,7 +10,7 @@ l'avantage d'une instance centralisée c'est que si l'URL du backend change
 on la modifie ici une seule fois au lieu de la changer dans chaque composant*/
 const API = axios.create({ baseURL: 'http://localhost:5000/api' })
 
-/*GET /api/stats/global
+/*GET /api/stats/global*/
 export const getGlobalStats = () => API.get('/stats/global')
 
 /*nouv produit avec une image possible (FormData)

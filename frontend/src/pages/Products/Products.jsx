@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 import { getProducts, createProduct, deleteProduct, updateProduct } from '../../api'
 import ConfirmModal from '../../components/ConfirmModal/ConfirmModal'
 import Cropper from 'react-easy-crop'
@@ -15,7 +16,7 @@ const CATEGORY_COLORS = {
 retourne un Blob (fichier image prêt à être envoyé au backend)*/
 async function getCroppedBlob(imageSrc, croppedAreaPixels) {
   const image = await new Promise((resolve, reject) => {
-    const img = new Image()
+    const img = new window.Image()
     img.onload = () => resolve(img)
     img.onerror = reject
     img.src = imageSrc
@@ -93,13 +94,15 @@ function ImageUploadZone({ preview, onFile }) {
   return (
     <>
       {/*affiche le recadreur*/}
-      {cropSrc && (
+      {cropSrc && createPortal(
         <ImageCropper
           src={cropSrc}
           onDone={(file, preview) => { setCropSrc(null); onFile(file, preview) }}
           onCancel={() => setCropSrc(null)}
-        />
+        />,
+        document.body
       )}
+ 
       <div
         onClick={() => inputRef.current.click()}
         onDragOver={(e) => { e.preventDefault(); setDragging(true) }}
@@ -130,7 +133,7 @@ function ImageUploadZone({ preview, onFile }) {
     </>
   )
 }
-
+ 
 /*contenu partagé entre le formulaire d'ajout et le formulaire de modification*/
 function FormContent({ name, setName, category, setCategory, imagePreview, onImageFile, onRemoveImage, error, loading, onSubmit, onCancel, submitLabel }) {
   return (
