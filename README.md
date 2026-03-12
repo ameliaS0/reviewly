@@ -149,7 +149,10 @@ py data/init_db.py
 
 Le script crée automatiquement la base, les tables et insère les données de démonstration.  
 Si la base existe déjà avec des données, rien n'est écrasé.    
-
+> **Note :** Les images des produits de démonstration ne sont pas incluses dans `seed.sql`.
+> Les produits s'affichent sans image après l'initialisation cela évite d'alourdir
+> le dépôt et de risquer des erreurs mémoire au chargement.
+> Vous pouvez ajouter vos propres images directement depuis l'interface après le lancement.
 ### 4. Installer le frontend
 
 ```bash
