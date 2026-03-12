@@ -115,7 +115,7 @@ cd reviewly
 
 ```bash
 cd backend
-python -m venv env
+py -m venv env
 source env/bin/activate      # Windows: env\Scripts\activate
 pip install -r requirements.txt
 pip install sentencepiece     # Requis pour CamemBERT
@@ -134,7 +134,7 @@ SENTIMENT_MODEL=cmarkea/distilcamembert-base-sentiment
 ### 3. Initialiser la base de données
 
 ```bash
-python data/init_db.py
+py data/init_db.py
 ```
 
 Le script crée automatiquement la base, les tables et insère les données de démonstration. Si la base existe déjà avec des données, rien n'est écrasé.

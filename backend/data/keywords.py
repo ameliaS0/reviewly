@@ -1,6 +1,3 @@
-# ─────────────────────────────────────────────
-#  STOP WORDS
-# ─────────────────────────────────────────────
 STOP_WORDS = {
     # Français
     'le','la','les','de','du','des','un','une','et','en','est','que','qui',
@@ -27,14 +24,7 @@ STOP_WORDS = {
     'few','many','most','both','while','though','although','however','still',
 }
 
-# ─────────────────────────────────────────────
-#  SYNONYMES par catégorie
-# ─────────────────────────────────────────────
 SYNONYMS = {
-
-    # ════════════════════════════════
-    #  INFORMATIQUE
-    # ════════════════════════════════
 
     # Batterie / Autonomie
     'battery': 'batterie', 'batteries': 'batterie',
@@ -123,10 +113,6 @@ SYNONYMS = {
     'port': 'charge', 'watt': 'charge',
     'wireless': 'charge', 'induction': 'charge',
 
-    # ════════════════════════════════
-    #  AUDIO
-    # ════════════════════════════════
-
     # Son / Qualité audio
     'sound': 'son', 'audio': 'son',
     'son': 'son', 'noise': 'son',
@@ -156,10 +142,6 @@ SYNONYMS = {
     'noise-cancelling': 'isolation', 'réduction': 'isolation',
     'passive': 'isolation', 'active': 'isolation',
     'seal': 'isolation', 'joint': 'isolation',
-
-    # ════════════════════════════════
-    #  SPORT
-    # ════════════════════════════════
 
     # Confort / Maintien
     'comfort': 'confort', 'comfortable': 'confort',
@@ -205,10 +187,6 @@ SYNONYMS = {
     'serré': 'taille', 'large': 'taille',
     'slim': 'taille', 'oversized': 'taille',
 
-    # ════════════════════════════════
-    #  MODE
-    # ════════════════════════════════
-
     # Tissu / Matière
     'tissu': 'matière', 'fabric': 'matière',
     'matière': 'matière', 'material': 'matière',
@@ -248,10 +226,6 @@ SYNONYMS = {
     'entretien': 'entretien', 'care': 'entretien',
     'sèche': 'entretien', 'dry': 'entretien',
     'repassage': 'entretien', 'iron': 'entretien',
-
-    # ════════════════════════════════
-    #  MAISON
-    # ════════════════════════════════
 
     # Montage / Installation
     'montage': 'montage', 'assembly': 'montage',
@@ -294,10 +268,6 @@ SYNONYMS = {
     'smells': 'odeur', 'toxic': 'odeur',
     'toxique': 'odeur', 'chimique': 'odeur',
     'chemical': 'odeur', 'plastique': 'odeur',
-
-    # ════════════════════════════════
-    #  COMMUN (toutes catégories)
-    # ════════════════════════════════
 
     # Qualité générale
     'quality': 'qualité', 'mauvais': 'qualité',
@@ -365,9 +335,6 @@ SYNONYMS = {
     'tutorial': 'notice',
 }
 
-# ─────────────────────────────────────────────
-#  RECOMMENDATIONS par clé normalisée
-# ─────────────────────────────────────────────
 RECOMMENDATIONS_MAP = {
     # Informatique
     'batterie':     'Améliorer la durée de vie de la batterie',
